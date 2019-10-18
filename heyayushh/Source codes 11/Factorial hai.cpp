@@ -1,19 +1,24 @@
 #include<iostream>
 using namespace std;
 
-long factorial(int x)
+int factorial(int number)
 {
-	if(x==1)
-		return 1;
+	if (number == 1 || number == 0)
+    {
+        return 1;
+    }
 	else
-	    return (factorial(x-1)*x);
+	    return (factorial(number-1)*number);
 }
 int main(void)
 {
-	int x,y;
+	int number,y;
 	
-	cout<<"enter  ";
-	cin>>x;
+	cout<<"enter number :- ";
+	cin>>number;
+	y=factorial(number);
 	
-	y=factorial(x);
+	printf("%d's Factorial is %d\n",number ,y);
+	
+	return 0;
 }
